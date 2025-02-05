@@ -1,0 +1,42 @@
+ion-content {
+    --background: #000; 
+  }
+  
+  ion-searchbar {
+    --background: #222;
+    --color: white;
+    --placeholder-color: #aaa;
+  }
+  
+  ion-grid {
+    padding: 10px;
+  }
+  
+  .reel-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    overflow: hidden;
+  }
+  
+  .reel-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .play-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 5px;
+  }
+  

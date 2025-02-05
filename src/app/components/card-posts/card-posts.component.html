@@ -1,0 +1,46 @@
+<ion-card *ngFor="let post of posts">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img [src]="post.avatar" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ post.username }}</h2>
+      <p>{{ post.location }}</p>
+    </ion-label>
+  </ion-item>
+
+  <img [src]="post.image" alt="Post image" />
+
+  <ion-item>
+
+    <ion-icon 
+    [name]="isFavorite ? 'heart' : 'heart-outline'"
+    [class.red]="isFavorite"
+    slot="start"
+    (click)="toggleFavorite()">
+  </ion-icon>
+  
+
+    <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+    <ion-icon name="paper-plane-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <p>{{ post.likes }} de gusta</p>
+
+      <p><strong>{{ post.username }}</strong> {{ post.description }}</p>
+
+    </ion-label>
+  </ion-item>
+
+  <ion-card-content>
+  
+    <ion-label>
+      <p>comentarios</p>
+    </ion-label>   
+    <p><strong>{{ post.comentarios }}</strong> {{ post.comen }}</p>
+  </ion-card-content>
+
+
+</ion-card>
